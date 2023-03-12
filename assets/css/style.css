@@ -1,0 +1,304 @@
+@import url(./animation.css);
+@import url(./about.css);
+@import url(./service.css);
+@import url(./gallery.css);
+@import url(./contact.css);
+@import url(./footer.css);
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  list-style-type: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --transparent: #00000073;
+  --black: #000000;
+  --primary-text-dark: #055a5b;
+  --primary-text-light: #ffffff;
+  --para-gray-color: #94949a;
+  --main-font: "Inter", sans-serif;
+  --title-font: "Aclonica", sans-serif;
+  --paragraph: "Poppins", sans-serif;
+}
+
+/*
+font-family: 'Aclonica', sans-serif;
+font-family: 'Cinzel', serif;
+font-family: 'Inter', sans-serif;
+*/
+
+
+/* width */
+::-webkit-scrollbar, body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 15px;
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-text-dark);
+  border-radius: 15px;
+  height: 15px;
+}
+
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-text-dark);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-text-light);
+  color: var(--primary-text-dark);
+  overflow-x: hidden;
+  font-size: 100%;
+  font-family: var(--main-font);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: transparent;
+}
+
+section {
+  width: 100%;
+}
+
+h1 {
+  color: var(--primary-text-dark);
+  font-family: var(--title-font);
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--para-color);
+  font-family: var(--paragraph);
+}
+
+/*The hotel design layouts start here*/
+main {
+  width: 100%;
+  height: 100vh;
+}
+
+section.container-wrapper {
+  background-color: var(--transparent);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+/*header design goes here including the logo and navigation links*/
+
+header#header {
+  width: 100%;
+  height: 100vh;
+  color: var(--primary-text-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 150px;
+  text-align: center;
+}
+
+.header-img-holder {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--transparent);
+}
+
+.header-img-holder:before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  background-color: var(--transparent);
+  height: 100%;
+  z-index: 0;
+}
+
+.header-img-holder > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-wrapper {
+  background-color: transparent;
+  z-index: 4;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+a.hotel-logo {
+  padding: 10px;
+  width: fit-content;
+  color: var(--primary-text-light);
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 500ms ease-in-out;
+  font-family: var(--title-font);
+  mix-blend-mode: hard-light;
+}
+
+a.hotel-logo:hover {
+  transform: translate(20px, 0px);
+  color: var(--para-gray-color);
+}
+
+nav#hamburger {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  padding: 10px;
+}
+
+nav#hamburger > .first-stick.active {
+  transform: rotate(-45deg) translate(-2px, 4px);
+}
+
+nav#hamburger > .second-stick.active {
+  transform: rotate(45deg) translate(-2px, -3px);
+}
+
+#hamburger > .first-stick,
+.second-stick,
+.third-stick {
+  width: 30px;
+  padding: 1px;
+  background-color: var(--primary-text-light);
+  transition: 500ms ease-in-out;
+}
+
+/*we will make the display none, it will be displayed by the hamburger button only and when any of the link is clicked the display will go back to none*/
+
+.hamburger-link {
+  background-color: var(--primary-text-dark);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.hamburger-link {
+  display: none;
+}
+
+.hamburger-link > nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+}
+
+.hamburger-link > nav.hamburger-social-link {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+}
+
+.hamburger-link > nav > a {
+  color: var(--primary-text-light);
+  font-size: 2rem;
+  font-family: var(--title-font);
+  transition: 500ms ease-in-out;
+}
+
+.hamburger-link > nav > a:hover {
+  color: var(--primary-text-light);
+  font-size: 2rem;
+  color: var(--para-gray-color);
+  transform: translate(5px, 0px) scale(0.95);
+}
+
+.hamburger-link > nav.hamburger-social-link > a {
+  padding: 0px;
+  width: 20%;
+}
+
+i.fa-brands {
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+/*home design*/
+
+.home-wrapper {
+  padding: 2% 5%;
+}
+
+.home-wrapper > h1 {
+  font-size: 2.8rem;
+  width: 100%;
+  color: var(--primary-text-light);
+  animation: h1MotionMoves alternate 2s infinite;
+  z-index: 3;
+}
+/*home arrow design*/
+.home-arrow {
+  overflow: hidden;
+  z-index: 1;
+  padding-bottom: 85px;
+}
+
+.home-arrow > img {
+  animation: upDown 1500ms 500ms infinite alternate;
+}
+
+@media screen and (max-width: 320) {
+  .home-wrapper > h1 {
+    font-size: 2.5rem;
+    width: 100%;
+    animation: h1MotionMoves alternate 2s infinite;
+    z-index: 3;
+  }
+}

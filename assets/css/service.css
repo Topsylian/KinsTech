@@ -1,0 +1,149 @@
+:root {
+  --transparent: #00000073;
+  --black: #000000;
+  --primary-text-dark: #055a5b;
+  --primary-text-light: #ffffff;
+  --para-gray-color: #94949a;
+  --main-font: "Inter", sans-serif;
+  --title-font: "Aclonica", sans-serif;
+  --paragraph: "Poppins", sans-serif;
+}
+
+#services {
+	width: 100%;
+	padding: 3% 3%;
+	margin-bottom: 100px;
+}
+
+.service-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.service-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+	margin-bottom: 0px;
+}
+
+.service-heading > h1 {
+  width: fit-content;
+	font-size: 2.5rem;
+  transition: .5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+	color: var(--black);
+  gap: 2px;
+  animation: slideBehind 3s, h1MotionMoves 2s infinite alternate;
+}
+
+.service-heading > h1:hover {
+  color: var(--para-gray-color);
+}
+
+.service-heading > h1:hover .border-bottom {
+  width: 80%;
+  background-color: var(--para-gray-color);
+}
+
+.border-bottom {
+  background-color: var(--black);
+  width: 50%;
+  padding: 1px;
+  transition: .5s ease-in-out;
+}
+
+.service-slider {
+	width: 100%;
+	height: fit-content;
+	padding: 0 0px 20px 0px;
+	display: grid;
+	gap: 0px;
+	grid-template-columns: repeat(3, 100%);
+}
+
+.service-slider::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+/* Track */
+.service-slider::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0px grey;
+  border-radius: 0px;
+  background: transparent;
+}
+
+/* Handle */
+.service-slider::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 15px;
+  height: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+.first-service, .second-service, .third-service {
+	display: flex;
+	width: 100%;
+}
+
+.first-service-box, .second-service-box, .third-service-box {
+	width: 100%;
+	height: 650px;
+	display: flex;
+	padding: 0% 0% 5%;
+	flex-direction: column;
+	gap: 50px;
+	box-shadow: 0px 0px 2px 0px var(--transparent);
+	transition: .5s ease-in-out;
+}
+
+/*
+.first-service-box:hover, .second-service-box:hover, .third-service-box:hover {
+	transform: scale(0.97);
+}
+*/
+
+.awaken-service-img, .wedding-service-img, .retreat-service-img {
+	width: 100%;
+	height: 350px;
+}
+
+.awaken-service-img > img, .wedding-service-img > img, .retreat-service-img > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.awaken-service-details, .retreat-service-details, .wedding-service-details {
+	padding: 0px 15px;
+}
+
+.retreat-service-details > h2, .awaken-service-details > h2, .wedding-service-details > h2 {
+	font-size: 2rem;
+	margin-bottom: 20px;
+	color: var(--black);
+}
+
+.retreat-service-details > p, .awaken-service-details > p, .wedding-service-details > p {
+	line-height: 1.6;
+	font-size: 0.85rem;
+	text-align: left;
+	color: var(--para-gray-color);
+}
+
+.service-cell {
+	width: 100%;
+	display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}

@@ -1,0 +1,83 @@
+
+/*the home arrow animation*/
+@keyframes upDown {
+  0% {
+    transform: translate(0, -50px);
+  }
+
+  100% {
+    transform: translate(0, 80px);
+  }
+}
+
+/*the home h1 animation that goes up and down*/
+
+@keyframes h1MotionMoves {
+	0% {
+		transform: translate(0, 10px);
+	}
+
+	100% {
+		transform: translate(0, -10px);
+	}
+}
+
+
+@keyframes aboutMotionMoves {
+	0% {
+		
+	}
+
+	100% {
+		transform: scale(0.95);
+	}
+}
+
+@keyframes aboutMotionMoves2 {
+	0% {
+		transform: translate(50px, 0);
+	}
+
+	100% {
+		transform: translate(0, 0);
+	}
+}
+/*about animations are all down here*/
+@keyframes slideBehind {
+  0% {
+    margin-left: -50%;
+  }
+
+  100% {
+    margin-left: 0%;
+  }
+}
+
+/*about image background slide*/
+@keyframes slideAboutImage {
+  0% {
+    margin-right: -50%;
+  }
+
+  100% {
+    margin-right: 0%;
+  }
+}
+
+/*about image second background slide*/
+@keyframes slideAboutImageSecond {
+  0% {
+    margin-left: -50%;
+  }
+
+  100% {
+    margin-left: 0%;
+  }
+}
+
+/*service carousel animation*/
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}

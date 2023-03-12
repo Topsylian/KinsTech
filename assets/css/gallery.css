@@ -1,0 +1,204 @@
+@import url(./style.css);
+
+:root {
+  --transparent: #00000073;
+  --black: #000000;
+  --primary-text-dark: #055a5b;
+  --primary-text-light: #ffffff;
+  --para-gray-color: #94949a;
+  --main-font: "Inter", sans-serif;
+  --title-font: "Aclonica", sans-serif;
+  --paragraph: "Poppins", sans-serif;
+}
+
+#gallery {
+	width: 100%;
+	padding: 3% 3%;
+	margin-bottom: 100px;
+}
+
+.gallery-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.gallery-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+	margin-bottom: 0px;
+}
+
+.gallery-heading > h1 {
+  width: 70%;
+	font-size: 2.5rem;
+  transition: .5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  animation: slideBehind 3s, h1MotionMoves 2s infinite alternate;
+  color: var(--black);
+}
+
+.gallery-heading > h1:hover {
+  color: var(--para-gray-color);
+}
+
+.gallery-heading > h1:hover .border-bottom {
+  width: 50%;
+  background-color: var(--para-gray-color);
+}
+
+.gallery-heading > h1 > .border-bottom {
+  background-color: var(--black);
+  width: 35%;
+  padding: 1px;
+  transition: .5s ease-in-out;
+}
+
+/* gallery show box design goes here, it's the container holding the gallery introduction display images, paragraphs and button that link to gallery page*/
+
+.gallery-show-box {
+  width: 100%;
+}
+
+.gallery-show-box-images {
+  width: 100%;
+  padding: 0px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 250px 250px;
+  margin-bottom: 100px;
+}
+
+.gallery-show-img {
+  transition: .5s ease-in-out;
+}
+
+.gallery-first-img {
+  grid-area: 1 / 1 / span 1/ span 2;
+}
+
+.gallery-show-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .5s ease-in-out;
+}
+
+.gallery-show-img:hover img{
+  transform: scale(.95);
+}
+
+/*gallery card design*/
+.gallery-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-bottom: 100px;
+}
+
+.first-gallery-card, .second-gallery-card, .third-gallery-card {
+  width: 100%;
+  padding: 0% 0% 50px 0%;
+  transition: .5s ease-in-out;
+  margin-bottom: 0px;
+  box-shadow: -1px 1px 5px 0px var(--transparent);
+}
+
+.standard-room-img, .deluxe-room-img, .presidential-suite-room-img {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.standard-room-img > img, .deluxe-room-img > img, .presidential-suite-room-img > img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/*room-detail-box design*/
+
+.room-detail-box {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  padding: 0% 3%;
+}
+
+.room-detail-box > h2 {
+  font-size: 2rem;
+}
+
+.room-detail-box > p {
+  line-height: 1.6;
+	font-size: 0.85rem;
+	text-align: left;
+	color: var(--para-gray-color);
+}
+
+.room-detail-box > a {
+  width: 100%;
+  padding: 15px 35px;
+  background-color: var(--primary-text-light);
+  color: var(--primary-text-dark);
+  border: 1px solid var(--primary-text-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s ease-in-out;
+}
+
+.room-detail-box > a:hover {
+  background-color: var(--primary-text-dark);
+  color: var(--primary-text-light);
+}
+
+/*gallery details design*/
+
+.gallery-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px 0px;
+}
+
+.gallery-details-heading, .gallery-details-info, .gallery-show-button {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-details-heading > h2{
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.gallery-details-info > p {
+  color: var(--para-gray-color);
+  line-height: 1.6;
+}
+
+.gallery-show-button > a {
+  display: block;
+  color: var(--primary-text-light);
+  background-color: var(--primary-text-dark);
+  border: 1px solid transparent;
+  width: 200px;
+  padding: 15px 25px;
+  transition: .5s ease-in-out;
+}
+
+.gallery-show-button > a:hover {
+  background-color: var(--primary-text-light);
+  color: var(--primary-text-dark);
+  border: 1px solid var(--primary-text-dark);
+}

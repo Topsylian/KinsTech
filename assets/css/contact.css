@@ -1,0 +1,385 @@
+:root {
+  --transparent: #00000073;
+  --black: #000000;
+  --primary-text-dark: #055a5b;
+  --primary-text-light: #ffffff;
+  --para-gray-color: #94949a;
+  --main-font: "Inter", sans-serif;
+  --title-font: "Aclonica", sans-serif;
+  --paragraph: "Poppins", sans-serif;
+}
+
+#contact {
+	width: 100%;
+	padding: 8% 0% 0%;
+	margin-bottom: 100px;
+	background-color: var(--primary-text-dark);
+}
+
+.contact-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.contact-heading {
+  display: flex;
+  flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  gap: 5px;
+	margin-bottom: 0px;
+}
+
+.contact-heading > h1 {
+  width: 80%;
+	font-size: 2.5rem;
+  transition: .5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  animation: slideBehind 3s, h1MotionMoves 2s infinite alternate;
+  color: var(--primary-text-light);
+	text-align: center;
+}
+
+.contact-heading > h1:hover {
+  color: var(--para-gray-color);
+}
+
+.contact-heading > h1:hover .border-bottom::before {
+	width: 30%;
+  background-color: var(--para-gray-color);
+}
+
+.contact-heading > h1:hover .border-bottom::after {
+	width: 30%;
+  background-color: var(--para-gray-color);
+}
+
+.contact-heading > h1 > .border-bottom {
+  background-color: transparent;
+  width: 100%;
+  padding: 2px;
+	display: flex;
+  transition: .5s ease-in-out;
+	display: flex;
+	justify-content: center;
+}
+
+.contact-heading > h1 > .border-bottom::after {
+	content: '';
+	width: 15%;
+	padding: 2px;
+	background-color: var(--primary-text-light);
+  transition: .5s ease-in-out;
+}
+
+.contact-heading > h1 > .border-bottom::before {
+	content: '';
+	width: 15%;
+	padding: 2px;
+  transition: .5s ease-in-out;
+	background-color: var(--primary-text-light);
+}
+
+/*
+.get-in-touch {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.get-in-touch > a {
+  display: flex;
+	justify-content: center;
+	width: 200px;
+	height: 50px;
+  background-color: var(--primary-text-light);
+  color: var(--primary-text-dark);
+  border: 1px solid transparent;
+  padding: 15px;
+  transition: .5s ease-in-out;
+}
+
+.get-in-touch > a:hover {
+  color: var(--primary-text-light);
+  background-color: var(--primary-text-dark);
+  border: 1px solid var(--primary-text-light);
+}
+*/
+
+#newsletter {
+	padding: 0% 5% 3%;
+}
+
+.newsletter-info {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 25px;
+	padding: 5% 0;
+}
+
+.newsletter-heading {
+	margin-bottom: 25px;
+}
+
+.newsletter-heading > h1 {
+  width: 100%;
+	font-size: 2.5rem;
+  transition: .5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  animation: slideBehind 3s, h1MotionMoves 2s infinite alternate;
+  color: var(--primary-text-light);
+	text-align: center;
+}
+
+.newsletter-heading > h1:hover {
+  color: var(--para-gray-color);
+}
+
+.newsletter-heading > h1:hover .border-bottom::before {
+	width: 40%;
+  background-color: var(--para-gray-color);
+}
+
+.newsletter-heading > h1:hover .border-bottom::after {
+	width: 40%;
+  background-color: var(--para-gray-color);
+}
+
+.newsletter-heading > h1 > .border-bottom {
+  background-color: transparent;
+  width: 100%;
+  padding: 1px;
+	display: flex;
+  transition: .5s ease-in-out;
+	display: flex;
+	justify-content: center;
+}
+
+.newsletter-heading > h1 > .border-bottom::after {
+	content: '';
+	width: 25%;
+	padding: 2px;
+	background-color: var(--primary-text-light);
+  transition: .5s ease-in-out;
+}
+
+.newsletter-heading > h1 > .border-bottom::before {
+	content: '';
+	width: 25%;
+	padding: 2px;
+  transition: .5s ease-in-out;
+	background-color: var(--primary-text-light);
+}
+
+.newsletter-info > p {
+	width: 100%;
+	color: var(--primary-text-light);
+	line-height: 1.6;
+	text-align: left;
+	font-size: 0.85rem;
+}
+
+#newsletter > form {
+	color: var(--primary-text-light);
+	padding: 15px;
+}
+
+form > .form-name, .form-tel, .form-email {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0px;
+	margin-bottom: 25px;
+}
+
+label {
+	visibility: hidden;
+	font-size: 0.75rem;
+	color: palevioletred;
+	text-transform: uppercase;
+}
+
+::placeholder {
+	color: var(--para-gray-color);
+	font-family: var(--main-font);
+	display: block;
+}
+
+.input {
+	width: 100%;
+	outline: transparent;
+	outline: none;
+	background-color: transparent;
+	border-bottom: 2px solid;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	appearance: none;
+	-webkit-appearance: none;
+	padding: 5px 0;
+	font-size: 1rem;
+	color: var(--primary-text-light);
+	transition: .5s ease-in-out;
+}
+
+.input:hover {
+	border-bottom: 2px solid var(--para-gray-color);
+}
+
+.input:focus{
+	border-bottom: 2px solid var(--para-gray-color);
+}
+
+.input:focus::placeholder{
+	color: transparent;
+}
+
+.form-text {
+	position: relative;
+	margin-bottom: 25px;
+}
+
+textarea {
+	width: 100%;
+	border-radius: 10px;
+	border: 1px solid var(--primary-text-light);
+	height: 250px;
+	font-size: 1rem;
+	margin-top: 5px;
+	padding: 15px;
+	outline: transparent;
+	background-color: transparent;
+	color: var(--primary-text-light);
+}
+
+
+textarea:hover {
+	border: 1px solid var(--para-gray-color);
+}
+
+textarea:focus{
+	border: 1px solid var(--para-gray-color);
+}
+
+textarea:focus::placeholder{
+	color: transparent;
+}
+
+span.optional {
+	position: absolute;
+	top: 45px;
+	right: 30px;
+}
+
+label.form-subscribe {
+	display: flex;
+	visibility: visible;
+	align-items: center;
+	justify-content: center;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.form-subscribe > input[type='checkbox'] {
+	outline: transparent;
+	background-color: transparent;
+	position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.customcheck {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+	height: 23px;
+  width: 23px;
+	border-radius: 5px;
+  background-color: var(--primary-text-light);
+	transition: .5s ease-in-out;
+	border: 1px solid transparent;
+}
+
+.form-subscribe:hover > input[type='checkbox'] ~ .customcheck {
+	background-color: var(--para-gray-color);
+}
+
+.form-subscribe > input[type='checkbox']:checked ~ .customcheck {
+	background-color: var(--primary-text-dark);
+	border: 1px solid var(--primary-text-light);
+}
+
+.customcheck:after {
+	content: "";
+  position: absolute;
+  display: none;
+}
+
+.form-subscribe > input[type='checkbox']:checked ~ .customcheck:after {
+	display: block;
+}
+
+.form-subscribe .customcheck:after {
+	left: 8px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+}
+
+.form-subscribe > p {
+	font-size: 1rem;
+	color: var(--primary-text-light);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.form-button {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+input[type='submit'] {
+  display: flex;
+	justify-content: center;
+	font-size: 1.1rem;
+	width: 200px;
+	height: 50px;
+  background-color: var(--primary-text-light);
+  color: var(--primary-text-dark);
+  border: 1px solid transparent;
+  padding: 15px;
+  transition: .5s ease-in-out;
+}
+
+input[type='submit']:hover {
+  color: var(--primary-text-light);
+  background-color: var(--primary-text-dark);
+  border: 1px solid var(--primary-text-light);
+}
